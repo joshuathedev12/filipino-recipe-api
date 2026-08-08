@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: filipino-recipe-api
+    env: node
+    buildCommand: npm install --production
+    startCommand: node server.js

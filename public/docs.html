@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FilipinoRecipe API — Authentic Filipino Recipes for Developers</title>
+  <meta name="description" content="A RESTful API for authentic Filipino recipes. Adobo, Sinigang, Lechon, and more. Get your free API key and start building today.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f0f1a;
+      --bg-card: #1a1a2e;
+      --bg-code: #16213e;
+      --primary: #ff6b35;
+      --primary-hover: #e85d2c;
+      --accent: #f7c948;
+      --text: #e8e8ed;
+      --text-muted: #9ca3af;
+      --border: #2a2a45;
+      --success: #22c55e;
+      --radius: 12px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+    /* ─── Hero ─── */
+    .hero {
+      padding: 80px 0 60px;
+      text-align: center;
+      background: linear-gradient(180deg, #1a1a2e 0%, var(--bg) 100%);
+      border-bottom: 1px solid var(--border);
+    }
+    .hero-badge {
+      display: inline-block;
+      background: rgba(255,107,53,0.15);
+      color: var(--primary);
+      padding: 6px 16px;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+      border: 1px solid rgba(255,107,53,0.3);
+    }
+    .hero h1 {
+      font-size: 3.2rem;
+      font-weight: 800;
+      letter-spacing: -1px;
+      margin-bottom: 16px;
+    }
+    .hero h1 span { color: var(--primary); }
+    .hero p {
+      font-size: 1.2rem;
+      color: var(--text-muted);
+      max-width: 650px;
+      margin: 0 auto 32px;
+    }
+    .hero-stats {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 32px;
+    }
+    .hero-stats div {
+      text-align: center;
+    }
+    .hero-stats strong {
+      display: block;
+      font-size: 1.8rem;
+      color: var(--accent);
+    }
+    .hero-stats span {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+    .btn {
+      display: inline-block;
+      background: var(--primary);
+      color: #fff;
+      padding: 14px 36px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: all 0.2s;
+      border: none;
+      cursor: pointer;
+    }
+    .btn:hover { background: var(--primary-hover); transform: translateY(-2px); }
+    .btn-outline {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text);
+      margin-left: 12px;
+    }
+    .btn-outline:hover { border-color: var(--primary); color: var(--primary); }
+
+    /* ─── Sections ─── */
+    section { padding: 64px 0; }
+    section h2 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    section > p.sub {
+      color: var(--text-muted);
+      margin-bottom: 40px;
+      max-width: 600px;
+    }
+
+    /* ─── API Key Generator ─── */
+    .key-generator {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 40px;
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .key-generator h3 {
+      font-size: 1.3rem;
+      margin-bottom: 8px;
+    }
+    .key-generator p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-bottom: 24px;
+    }
+    .key-generator input {
+      width: 100%;
+      padding: 12px 16px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      color: var(--text);
+      font-size: 0.95rem;
+      margin-bottom: 12px;
+      outline: none;
+      transition: border 0.2s;
+    }
+    .key-generator input:focus { border-color: var(--primary); }
+    .key-output {
+      display: none;
+      margin-top: 20px;
+      padding: 16px;
+      background: rgba(34,197,94,0.1);
+      border: 1px solid var(--success);
+      border-radius: 8px;
+      word-break: break-all;
+    }
+    .key-output .key-value {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.85rem;
+      color: var(--success);
+      background: #0d1f0d;
+      padding: 8px 12px;
+      border-radius: 6px;
+      display: inline-block;
+      margin: 8px 0;
+    }
+    .key-output .note {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+    .loader {
+      display: none;
+      width: 20px;
+      height: 20px;
+      border: 2px solid var(--border);
+      border-top: 2px solid var(--primary);
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+      margin: 12px auto;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ─── Endpoints ─── */
+    .endpoint-list { display: flex; flex-direction: column; gap: 12px; }
+    .endpoint {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .endpoint .method {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      min-width: 52px;
+      text-align: center;
+    }
+    .method.get { background: rgba(34,197,94,0.15); color: #22c55e; }
+    .method.post { background: rgba(59,130,246,0.15); color: #3b82f6; }
+    .endpoint .route {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.9rem;
+      flex: 1;
+    }
+    .endpoint .desc {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
+    /* ─── Code Blocks ─── */
+    .code-block {
+      background: var(--bg-code);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+      margin: 16px 0;
+      overflow-x: auto;
+    }
+    .code-block pre {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.85rem;
+      line-height: 1.6;
+      color: #d4d4d8;
+    }
+    .code-block .comment { color: #6b7280; }
+
+    /* ─── Categories Grid ─── */
+    .cat-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 16px;
+    }
+    .cat-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+      text-align: center;
+      transition: border-color 0.2s;
+    }
+    .cat-card:hover { border-color: var(--primary); }
+    .cat-card .emoji { font-size: 2rem; margin-bottom: 8px; }
+    .cat-card h4 { font-size: 1rem; }
+    .cat-card .count { color: var(--text-muted); font-size: 0.85rem; }
+
+    /* ─── Footer ─── */
+    footer {
+      text-align: center;
+      padding: 40px 0;
+      border-top: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    /* ─── Responsive ─── */
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2rem; }
+      .hero-stats { gap: 20px; flex-wrap: wrap; }
+      .endpoint { flex-wrap: wrap; }
+      .endpoint .desc { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ─── Hero ─── -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-badge">🍛 REST API • Free Tier • 20 Handcrafted Recipes</div>
+    <h1>Filipino<span>Recipe</span> API</h1>
+    <p>Authentic Filipino recipes served as a REST API. From Adobo to Lechon Kawali — get structured recipe data with ingredients, instructions, and nutrition info for your apps.</p>
+    <a href="#get-started" class="btn">Get Your Free API Key</a>
+    <a href="#endpoints" class="btn btn-outline">Browse Endpoints</a>
+    <div class="hero-stats">
+      <div><strong>20</strong><span>Recipes</span></div>
+      <div><strong>5</strong><span>Categories</span></div>
+      <div><strong>100/day</strong><span>Free Tier</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Get Started / API Key ─── -->
+<section id="get-started">
+  <div class="container">
+    <h2>🚀 Get Started</h2>
+    <p class="sub">Generate your free API key in seconds. No credit card required.</p>
+
+    <div class="key-generator">
+      <h3>Generate Your API Key</h3>
+      <p>Enter your name (optional) and get instant access to all endpoints.</p>
+      <input type="text" id="nameInput" placeholder="Your name (optional)" maxlength="50">
+      <input type="email" id="emailInput" placeholder="Email (optional)" maxlength="100">
+      <button class="btn" id="generateBtn" onclick="generateKey()">🔑 Generate API Key</button>
+      <div class="loader" id="loader"></div>
+      <div class="key-output" id="keyOutput">
+        <strong>✅ API Key Generated!</strong>
+        <div class="key-value" id="keyValue"></div>
+        <p class="note">⚠️ Save this key — it won't be shown again. Use it in the <code>X-API-Key</code> header.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Endpoints ─── -->
+<section id="endpoints">
+  <div class="container">
+    <h2>📡 API Endpoints</h2>
+    <p class="sub">All endpoints require your API key in the <code>X-API-Key</code> header.</p>
+
+    <div class="endpoint-list">
+      <div class="endpoint">
+        <span class="method get">GET</span>
+        <span class="route">/api/recipes</span>
+        <span class="desc">List all recipes (paginated)</span>
+      </div>
+      <div class="endpoint">
+        <span class="method get">GET</span>
+        <span class="route">/api/recipes/:id</span>
+        <span class="desc">Get a single recipe by ID</span>
+      </div>
+      <div class="endpoint">
+        <span class="method get">GET</span>
+        <span class="route">/api/recipes/search?q=adobo</span>
+        <span class="desc">Search recipes by name or ingredient</span>
+      </div>
+      <div class="endpoint">
+        <span class="method get">GET</span>
+        <span class="route">/api/recipes/category/:category</span>
+        <span class="desc">Filter by category (e.g., "chicken", "pork")</span>
+      </div>
+      <div class="endpoint">
+        <span class="method get">GET</span>
+        <span class="route">/api/recipes/random</span>
+        <span class="desc">Get a random recipe</span>
+      </div>
+      <div class="endpoint">
+        <span class="method get">GET</span>
+        <span class="route">/api/categories</span>
+        <span class="desc">Get all categories with recipe counts</span>
+      </div>
+      <div class="endpoint">
+        <span class="method post">POST</span>
+        <span class="route">/api/register</span>
+        <span class="desc">Register for a new API key</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Example Usage ─── -->
+<section>
+  <div class="container">
+    <h2>💻 Example Usage</h2>
+    <p class="sub">Try these commands with your API key (replace <code>YOUR_API_KEY</code>).</p>
+
+    <h3 style="margin-bottom: 8px; font-size: 1rem;">curl</h3>
+    <div class="code-block">
+      <pre>
+<span class="comment"># Get all recipes</span>
+curl -H "X-API-Key: YOUR_API_KEY" <span id="baseUrlDisplay">https://api.waiscart.ai.studio</span>/api/recipes
+
+<span class="comment"># Get recipe by ID</span>
+curl -H "X-API-Key: YOUR_API_KEY" <span id="baseUrlDisplay2">https://api.waiscart.ai.studio</span>/api/recipes/1
+
+<span class="comment"># Search for Adobo</span>
+curl -H "X-API-Key: YOUR_API_KEY" <span id="baseUrlDisplay3">https://api.waiscart.ai.studio</span>/api/recipes/search?q=adobo
+
+<span class="comment"># Chicken recipes</span>
+curl -H "X-API-Key: YOUR_API_KEY" <span id="baseUrlDisplay4">https://api.waiscart.ai.studio</span>/api/recipes/category/chicken
+
+<span class="comment"># Random recipe</span>
+curl -H "X-API-Key: YOUR_API_KEY" <span id="baseUrlDisplay5">https://api.waiscart.ai.studio</span>/api/recipes/random</pre>
+    </div>
+
+    <h3 style="margin-bottom: 8px; font-size: 1rem;">JavaScript (fetch)</h3>
+    <div class="code-block">
+      <pre>
+const response = await fetch('<span id="baseUrlDisplay6">https://api.waiscart.ai.studio</span>/api/recipes', {
+  headers: {
+    'X-API-Key': 'YOUR_API_KEY'
+  }
+});
+const data = await response.json();
+console.log(data);</pre>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Categories ─── -->
+<section>
+  <div class="container">
+    <h2>📂 Recipe Categories</h2>
+    <p class="sub">20 hand-picked Filipino recipes across 5 categories.</p>
+    <div class="cat-grid">
+      <div class="cat-card">
+        <div class="emoji">🐔</div>
+        <h4>Chicken</h4>
+        <div class="count">5 recipes</div>
+      </div>
+      <div class="cat-card">
+        <div class="emoji">🥩</div>
+        <h4>Pork</h4>
+        <div class="count">5 recipes</div>
+      </div>
+      <div class="cat-card">
+        <div class="emoji">🐟</div>
+        <h4>Fish &amp; Seafood</h4>
+        <div class="count">3 recipes</div>
+      </div>
+      <div class="cat-card">
+        <div class="emoji">🥬</div>
+        <h4>Vegetables</h4>
+        <div class="count">3 recipes</div>
+      </div>
+      <div class="cat-card">
+        <div class="emoji">🥟</div>
+        <h4>Breakfast &amp; Silog</h4>
+        <div class="count">2 recipes</div>
+      </div>
+      <div class="cat-card">
+        <div class="emoji">🍜</div>
+        <h4>Noodles &amp; Snacks</h4>
+        <div class="count">2 recipes</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Response Format ─── -->
+<section>
+  <div class="container">
+    <h2>📦 Response Format</h2>
+    <p class="sub">All responses follow a consistent JSON envelope.</p>
+    <div class="code-block">
+      <pre>
+{
+  "status": "success",
+  "count": 1,
+  "total": 20,
+  "page": 1,
+  "totalPages": 1,
+  "data": [
+    {
+      "id": 1,
+      "name": "Chicken Adobo",
+      "category": "Chicken",
+      "cuisine": "Filipino",
+      "difficulty": "Easy",
+      "prepTime": "10 min",
+      "cookTime": "40 min",
+      "servings": 4,
+      "image": "https://images.unsplash.com/...",
+      "keyIngredients": ["Chicken", "soy sauce", "vinegar", ...],
+      "ingredients": ["1 kg chicken...", "1/2 cup soy sauce...", ...],
+      "instructions": ["In a bowl...", "Heat oil...", ...],
+      "nutrition": {
+        "calories": 420,
+        "protein": "35g",
+        "carbs": "8g",
+        "fat": "28g"
+      }
+    }
+  ]
+}</pre>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Footer ─── -->
+<footer>
+  <div class="container">
+    <p>FilipinoRecipe API &mdash; Built with ❤️ for Filipino food lovers and developers everywhere.</p>
+    <p style="margin-top: 8px; font-size: 0.8rem;">Version 1.0.0</p>
+  </div>
+</footer>
+
+<script>
+async function generateKey() {
+  const btn = document.getElementById('generateBtn');
+  const loader = document.getElementById('loader');
+  const output = document.getElementById('keyOutput');
+  const keyValue = document.getElementById('keyValue');
+  const name = document.getElementById('nameInput').value.trim();
+  const email = document.getElementById('emailInput').value.trim();
+
+  btn.style.display = 'none';
+  loader.style.display = 'block';
+  output.style.display = 'none';
+
+  try {
+    const body = {};
+    if (name) body.name = name;
+    if (email) body.email = email;
+
+    const res = await fetch('/api/register', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(body)
+    });
+    const data = await res.json();
+
+    if (data.status === 'success') {
+      keyValue.textContent = data.data.api_key;
+      output.style.display = 'block';
+    } else {
+      alert('Error: ' + (data.message || 'Failed to generate key'));
+      btn.style.display = 'inline-block';
+    }
+  } catch (err) {
+    alert('Connection error: ' + err.message);
+    btn.style.display = 'inline-block';
+  } finally {
+    loader.style.display = 'none';
+  }
+}
+// Auto-detect base URL in code examples
+document.querySelectorAll('[id^="baseUrlDisplay"]').forEach(el => {
+  el.textContent = window.location.origin;
+});
+</script>
+</body>
+</html>
