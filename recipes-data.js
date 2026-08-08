@@ -109,7 +109,7 @@ const recipes = [
     prepTime: "10 min",
     cookTime: "45 min",
     servings: 4,
-    image: "https://images.unsplash.com/photo-16297216727-3715c0ab0a1e?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&q=80",
     keyIngredients: ["Chicken", "rice", "ginger", "garlic", "fish sauce", "calamansi", "egg"],
     ingredients: [
       "500g chicken, cut into pieces",
@@ -244,7 +244,7 @@ const recipes = [
     prepTime: "10 min",
     cookTime: "30 min",
     servings: 4,
-    image: "https://images.unsplash.com/photo-1544025162-d76694265947?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=600&q=80",
     keyIngredients: ["Pork belly", "bagoong alamang", "garlic", "onion", "vinegar", "siling pang-sigang"],
     ingredients: [
       "500g pork belly, sliced into bite-sized pieces",
@@ -306,7 +306,7 @@ const recipes = [
     prepTime: "10 min",
     cookTime: "50 min",
     servings: 4,
-    image: "https://images.unsplash.com/photo-1559563458-527698bf5295?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1476124369491-e7addf5db371?w=600&q=80",
     keyIngredients: ["Pork belly", "soy sauce", "vinegar", "garlic", "laurel", "saging na saba"],
     ingredients: [
       "500g pork belly, cubed",
@@ -369,7 +369,7 @@ const recipes = [
     prepTime: "10 min",
     cookTime: "20 min",
     servings: 3,
-    image: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1534604973900-c43ab4c2e0ab?w=600&q=80",
     keyIngredients: ["Bangus", "vinegar", "ginger", "garlic", "siling pang-sigang", "ampalaya"],
     ingredients: [
       "1 medium bangus (milkfish), sliced into serving pieces",
@@ -399,7 +399,7 @@ const recipes = [
     prepTime: "15 min",
     cookTime: "20 min",
     servings: 3,
-    image: "https://images.unsplash.com/photo-1534604973900-c43ab4c2e0ab?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=600&q=80",
     keyIngredients: ["Bangus fillet", "flour", "tomato sauce", "vinegar", "sugar", "bell pepper"],
     ingredients: [
       "500g bangus fillet, sliced into strips",
@@ -469,7 +469,7 @@ const recipes = [
     prepTime: "10 min (+ overnight soaking)",
     cookTime: "40 min",
     servings: 4,
-    image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&q=80",
     keyIngredients: ["Munggo", "garlic", "onion", "tomato", "chicharon/bagnet", "patis"],
     ingredients: [
       "1 cup munggo (mung beans), rinsed",
@@ -500,7 +500,7 @@ const recipes = [
     prepTime: "5 min",
     cookTime: "10 min",
     servings: 2,
-    image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=600&q=80",
     keyIngredients: ["Kangkong", "soy sauce", "vinegar", "garlic", "siling labuyo"],
     ingredients: [
       "2 bunches kangkong (water spinach), cut into 3-inch pieces",
@@ -562,7 +562,7 @@ const recipes = [
     prepTime: "5 min",
     cookTime: "25 min",
     servings: 4,
-    image: "https://images.unsplash.com/photo-1563379926898-05f4575a45d8?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=600&q=80",
     keyIngredients: ["Glutinous rice", "cocoa powder", "sugar", "milk", "tuyo"],
     ingredients: [
       "1 cup glutinous rice (malagkit)",
@@ -625,7 +625,7 @@ const recipes = [
     prepTime: "30 min",
     cookTime: "15 min",
     servings: "6 (makes ~30 pieces)",
-    image: "https://images.unsplash.com/photo-1555126634-323283e090fa?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80",
     keyIngredients: ["Ground pork", "carrots", "onion", "garlic", "lumpia wrapper", "soy sauce"],
     ingredients: [
       "500g ground pork",

@@ -251,6 +251,59 @@
     .cat-card h4 { font-size: 1rem; }
     .cat-card .count { color: var(--text-muted); font-size: 0.85rem; }
 
+    /* ─── Recipe Grid ─── */
+    .recipe-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .recipe-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .recipe-card:hover { border-color: var(--primary); transform: translateY(-4px); }
+    .recipe-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+    }
+    .recipe-card .info {
+      padding: 16px 20px 20px;
+    }
+    .recipe-card .info h4 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .recipe-card .info .meta {
+      display: flex;
+      gap: 12px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+    .recipe-card .info .meta span {
+      background: rgba(255,255,255,0.05);
+      padding: 2px 8px;
+      border-radius: 4px;
+    }
+    .recipe-card .info .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .recipe-card .info .tags span {
+      font-size: 0.75rem;
+      background: rgba(255,107,53,0.12);
+      color: var(--primary);
+      padding: 2px 8px;
+      border-radius: 4px;
+    }
+
     /* ─── Footer ─── */
     footer {
       text-align: center;
@@ -394,6 +447,19 @@ console.log(data);</pre>
   </div>
 </section>
 
+<!-- ─── Recipe Showcase ─── -->
+<section id="recipes">
+  <div class="container">
+    <h2>🍽️ Featured Recipes</h2>
+    <p class="sub">Browse our collection of 20 authentic Filipino dishes.</p>
+    <div class="recipe-grid" id="recipeGrid">
+      <div style="text-align:center;color:var(--text-muted);padding:40px;">
+        <p>Loading recipes... (use your API key to fetch)</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ─── Categories ─── -->
 <section>
   <div class="container">
@@ -525,6 +591,37 @@ async function generateKey() {
 document.querySelectorAll('[id^="baseUrlDisplay"]').forEach(el => {
   el.textContent = window.location.origin;
 });
+
+// ─── Load Recipe Showcase ───
+(async function loadRecipes() {
+  const grid = document.getElementById('recipeGrid');
+  if (!grid) return;
+  try {
+    const res = await fetch('/api/recipes', {
+      headers: { 'X-API-Key': 'demo-filipino-recipes-v1' }
+    });
+    const data = await res.json();
+    if (data.status !== 'success') throw new Error(data.message);
+    grid.innerHTML = data.data.map(r => `
+      <div class="recipe-card">
+        <img src="${r.image}" alt="${r.name}" loading="lazy" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22600%22 height=%22400%22><rect fill=%22%232a2a45%22 width=%22600%22 height=%22400%22/><text fill=%22%239ca3af%22 font-size=%2224%22 x=%2250%%22 y=%2250%%22 text-anchor=%22middle%22 dy=%22.3em%22>${r.name}</text></svg>'">
+        <div class="info">
+          <h4>${r.name}</h4>
+          <div class="meta">
+            <span>${r.category}</span>
+            <span>${r.difficulty}</span>
+            <span>${r.cookTime}</span>
+          </div>
+          <div class="tags">
+            ${r.keyIngredients.slice(0, 4).map(i => `<span>${i}</span>`).join('')}
+          </div>
+        </div>
+      </div>
+    `).join('');
+  } catch (e) {
+    grid.innerHTML = '<p style="color:var(--text-muted);text-align:center;padding:40px;">Sign up for an API key to see all 20 recipes with images 🍛</p>';
+  }
+})();
 </script>
 </body>
 </html>
