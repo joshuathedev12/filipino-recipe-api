@@ -106,12 +106,18 @@ function authenticateAPIKey(req, res, next) {
 }
 
 // ─── Public routes ───
+// Root serves the docs landing page
 app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'docs.html'));
+});
+
+// JSON API info for developers
+app.get('/api', (req, res) => {
   res.json({
     name: 'FilipinoRecipe API',
     version: '1.0.0',
     description: 'A comprehensive Filipino recipes API',
-    documentation: '/docs',
+    docs: `${req.protocol}://${req.get('host')}/`,
     register: 'POST /api/register',
     base_url: `${req.protocol}://${req.get('host')}`,
     endpoints: {
@@ -123,7 +129,8 @@ app.get('/', (req, res) => {
       categories: 'GET /api/categories'
     },
     authentication: 'Pass your API key in the X-API-Key header',
-    rateLimit: '100 requests/day per key'
+    rateLimit: '100 requests/day per key',
+    demoKey: 'demo-filipino-recipes-v1'
   });
 });
 
