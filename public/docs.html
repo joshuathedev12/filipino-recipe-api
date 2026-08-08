@@ -3,179 +3,177 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FilipinoRecipe API — Authentic Filipino Recipes for Developers</title>
-  <meta name="description" content="A RESTful API for authentic Filipino recipes. Adobo, Sinigang, Lechon, and more. Get your free API key and start building today.">
+  <title>FilipinoRecipe API — 20 Filipino dishes, one API</title>
+  <meta name="description" content="Adobo, Sinigang, Lechon Kawali, and 17 more Filipino recipes served as a REST API. Free tier, no signup wall.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #0f0f1a;
-      --bg-card: #1a1a2e;
-      --bg-code: #16213e;
-      --primary: #ff6b35;
-      --primary-hover: #e85d2c;
-      --accent: #f7c948;
-      --text: #e8e8ed;
-      --text-muted: #9ca3af;
-      --border: #2a2a45;
+      --bg: #0b0b12;
+      --surface: #14141e;
+      --surface-hover: #1c1c2a;
+      --border: #23233a;
+      --text: #e4e4eb;
+      --text-dim: #8888a0;
+      --accent: #f97316;
+      --accent-dim: rgba(249, 115, 22, 0.12);
       --success: #22c55e;
-      --radius: 12px;
+      --radius: 10px;
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Inter', -apple-system, sans-serif;
       background: var(--bg);
       color: var(--text);
-      line-height: 1.7;
+      line-height: 1.6;
       -webkit-font-smoothing: antialiased;
     }
-    .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+    .container { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
 
     /* ─── Hero ─── */
     .hero {
-      padding: 80px 0 60px;
-      text-align: center;
-      background: linear-gradient(180deg, #1a1a2e 0%, var(--bg) 100%);
+      padding: 72px 0 56px;
       border-bottom: 1px solid var(--border);
     }
-    .hero-badge {
-      display: inline-block;
-      background: rgba(255,107,53,0.15);
-      color: var(--primary);
-      padding: 6px 16px;
-      border-radius: 50px;
-      font-size: 0.85rem;
-      font-weight: 600;
-      margin-bottom: 20px;
-      border: 1px solid rgba(255,107,53,0.3);
-    }
     .hero h1 {
-      font-size: 3.2rem;
-      font-weight: 800;
-      letter-spacing: -1px;
-      margin-bottom: 16px;
+      font-size: 2.6rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 12px;
     }
-    .hero h1 span { color: var(--primary); }
+    .hero h1 span { color: var(--accent); }
     .hero p {
-      font-size: 1.2rem;
-      color: var(--text-muted);
-      max-width: 650px;
-      margin: 0 auto 32px;
+      font-size: 1.05rem;
+      color: var(--text-dim);
+      max-width: 600px;
+      margin-bottom: 28px;
+    }
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
     }
     .hero-stats {
       display: flex;
-      justify-content: center;
-      gap: 40px;
+      gap: 32px;
       margin-top: 32px;
+      padding-top: 28px;
+      border-top: 1px solid var(--border);
     }
     .hero-stats div {
-      text-align: center;
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
     }
     .hero-stats strong {
-      display: block;
-      font-size: 1.8rem;
-      color: var(--accent);
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--text);
     }
     .hero-stats span {
       font-size: 0.85rem;
-      color: var(--text-muted);
+      color: var(--text-dim);
     }
+
+    /* ─── Buttons ─── */
     .btn {
-      display: inline-block;
-      background: var(--primary);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--accent);
       color: #fff;
-      padding: 14px 36px;
-      border-radius: 50px;
+      padding: 12px 28px;
+      border-radius: 8px;
       text-decoration: none;
       font-weight: 600;
-      font-size: 1rem;
-      transition: all 0.2s;
+      font-size: 0.95rem;
+      transition: background 0.15s;
       border: none;
       cursor: pointer;
     }
-    .btn:hover { background: var(--primary-hover); transform: translateY(-2px); }
+    .btn:hover { background: #ea580c; }
     .btn-outline {
       background: transparent;
       border: 1px solid var(--border);
       color: var(--text);
-      margin-left: 12px;
     }
-    .btn-outline:hover { border-color: var(--primary); color: var(--primary); }
+    .btn-outline:hover { border-color: var(--text-dim); background: var(--surface); }
 
     /* ─── Sections ─── */
-    section { padding: 64px 0; }
+    section { padding: 56px 0; }
+    section + section { border-top: 1px solid var(--border); }
     section h2 {
-      font-size: 1.8rem;
-      font-weight: 700;
-      margin-bottom: 12px;
-    }
-    section > p.sub {
-      color: var(--text-muted);
-      margin-bottom: 40px;
-      max-width: 600px;
-    }
-
-    /* ─── API Key Generator ─── */
-    .key-generator {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 40px;
-      max-width: 600px;
-      margin: 0 auto;
-      text-align: center;
-    }
-    .key-generator h3 {
-      font-size: 1.3rem;
+      font-size: 1.5rem;
+      font-weight: 600;
       margin-bottom: 8px;
     }
-    .key-generator p {
-      color: var(--text-muted);
-      font-size: 0.9rem;
-      margin-bottom: 24px;
+    section .sub {
+      color: var(--text-dim);
+      margin-bottom: 32px;
+      max-width: 560px;
     }
-    .key-generator input {
+
+    /* ─── Key Generator ─── */
+    .key-gen {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px;
+      max-width: 480px;
+    }
+    .key-gen h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .key-gen p {
+      color: var(--text-dim);
+      font-size: 0.9rem;
+      margin-bottom: 20px;
+    }
+    .key-gen input {
       width: 100%;
-      padding: 12px 16px;
+      padding: 10px 14px;
       background: var(--bg);
       border: 1px solid var(--border);
-      border-radius: 8px;
+      border-radius: 6px;
       color: var(--text);
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       margin-bottom: 12px;
       outline: none;
-      transition: border 0.2s;
+      transition: border 0.15s;
     }
-    .key-generator input:focus { border-color: var(--primary); }
+    .key-gen input:focus { border-color: var(--accent); }
     .key-output {
       display: none;
-      margin-top: 20px;
-      padding: 16px;
-      background: rgba(34,197,94,0.1);
+      margin-top: 16px;
+      padding: 14px;
+      background: rgba(34, 197, 94, 0.08);
       border: 1px solid var(--success);
-      border-radius: 8px;
-      word-break: break-all;
+      border-radius: 6px;
+      font-size: 0.85rem;
     }
     .key-output .key-value {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       color: var(--success);
-      background: #0d1f0d;
-      padding: 8px 12px;
-      border-radius: 6px;
+      background: #0a1a0a;
+      padding: 6px 10px;
+      border-radius: 4px;
       display: inline-block;
-      margin: 8px 0;
+      margin: 6px 0;
+      word-break: break-all;
     }
     .key-output .note {
+      color: var(--text-dim);
       font-size: 0.8rem;
-      color: var(--text-muted);
     }
     .loader {
       display: none;
-      width: 20px;
-      height: 20px;
+      width: 18px;
+      height: 18px;
       border: 2px solid var(--border);
-      border-top: 2px solid var(--primary);
+      border-top: 2px solid var(--accent);
       border-radius: 50%;
       animation: spin 0.8s linear infinite;
       margin: 12px auto;
@@ -183,139 +181,137 @@
     @keyframes spin { to { transform: rotate(360deg); } }
 
     /* ─── Endpoints ─── */
-    .endpoint-list { display: flex; flex-direction: column; gap: 12px; }
     .endpoint {
-      background: var(--bg-card);
+      background: var(--surface);
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      padding: 20px 24px;
+      padding: 16px 20px;
       display: flex;
       align-items: center;
-      gap: 16px;
+      gap: 14px;
+      margin-bottom: 8px;
     }
+    .endpoint:last-child { margin-bottom: 0; }
     .endpoint .method {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.75rem;
+      font-size: 0.7rem;
       font-weight: 700;
-      padding: 4px 10px;
+      padding: 3px 8px;
       border-radius: 4px;
       text-transform: uppercase;
-      min-width: 52px;
+      min-width: 44px;
       text-align: center;
     }
-    .method.get { background: rgba(34,197,94,0.15); color: #22c55e; }
-    .method.post { background: rgba(59,130,246,0.15); color: #3b82f6; }
+    .method.get { background: rgba(34, 197, 94, 0.12); color: #22c55e; }
+    .method.post { background: rgba(59, 130, 246, 0.12); color: #60a5fa; }
     .endpoint .route {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       flex: 1;
     }
     .endpoint .desc {
-      color: var(--text-muted);
+      color: var(--text-dim);
       font-size: 0.85rem;
     }
 
     /* ─── Code Blocks ─── */
     .code-block {
-      background: var(--bg-code);
+      background: var(--surface);
       border: 1px solid var(--border);
       border-radius: var(--radius);
       padding: 20px;
-      margin: 16px 0;
+      margin: 12px 0;
       overflow-x: auto;
     }
     .code-block pre {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       line-height: 1.6;
-      color: #d4d4d8;
+      color: var(--text);
     }
     .code-block .comment { color: #6b7280; }
 
     /* ─── Categories Grid ─── */
     .cat-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 16px;
+      grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+      gap: 12px;
     }
     .cat-card {
-      background: var(--bg-card);
+      background: var(--surface);
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      padding: 20px;
+      padding: 18px;
       text-align: center;
-      transition: border-color 0.2s;
+      transition: border-color 0.15s;
     }
-    .cat-card:hover { border-color: var(--primary); }
-    .cat-card .emoji { font-size: 2rem; margin-bottom: 8px; }
-    .cat-card h4 { font-size: 1rem; }
-    .cat-card .count { color: var(--text-muted); font-size: 0.85rem; }
+    .cat-card:hover { border-color: var(--accent); }
+    .cat-card .emoji { font-size: 1.6rem; margin-bottom: 6px; line-height: 1; }
+    .cat-card h4 { font-size: 0.95rem; font-weight: 500; }
+    .cat-card .count { color: var(--text-dim); font-size: 0.8rem; margin-top: 2px; }
 
     /* ─── Recipe Grid ─── */
     .recipe-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 16px;
     }
     .recipe-card {
-      background: var(--bg-card);
+      background: var(--surface);
       border: 1px solid var(--border);
       border-radius: var(--radius);
       overflow: hidden;
-      transition: border-color 0.2s, transform 0.2s;
+      transition: border-color 0.15s;
     }
-    .recipe-card:hover { border-color: var(--primary); transform: translateY(-4px); }
+    .recipe-card:hover { border-color: var(--accent); }
     .recipe-card img {
       width: 100%;
-      height: 200px;
+      height: 180px;
       object-fit: cover;
       display: block;
     }
-    .recipe-card .info {
-      padding: 16px 20px 20px;
-    }
+    .recipe-card .info { padding: 14px 16px 16px; }
     .recipe-card .info h4 {
-      font-size: 1.1rem;
+      font-size: 1rem;
       font-weight: 600;
-      margin-bottom: 6px;
+      margin-bottom: 4px;
     }
     .recipe-card .info .meta {
       display: flex;
-      gap: 12px;
-      font-size: 0.8rem;
-      color: var(--text-muted);
+      gap: 8px;
+      font-size: 0.75rem;
+      color: var(--text-dim);
       margin-bottom: 8px;
     }
     .recipe-card .info .meta span {
-      background: rgba(255,255,255,0.05);
-      padding: 2px 8px;
+      background: rgba(255,255,255,0.04);
+      padding: 2px 7px;
       border-radius: 4px;
     }
     .recipe-card .info .tags {
       display: flex;
       flex-wrap: wrap;
-      gap: 6px;
+      gap: 4px;
     }
     .recipe-card .info .tags span {
-      font-size: 0.75rem;
-      background: rgba(255,107,53,0.12);
-      color: var(--primary);
-      padding: 2px 8px;
+      font-size: 0.7rem;
+      background: var(--accent-dim);
+      color: var(--accent);
+      padding: 2px 7px;
       border-radius: 4px;
     }
 
     /* ─── Footer ─── */
     footer {
       text-align: center;
-      padding: 40px 0;
+      padding: 32px 0;
       border-top: 1px solid var(--border);
-      color: var(--text-muted);
-      font-size: 0.9rem;
+      color: var(--text-dim);
+      font-size: 0.85rem;
     }
 
-    /* ─── Responsive ─── */
     @media (max-width: 768px) {
-      .hero h1 { font-size: 2rem; }
+      .hero h1 { font-size: 1.8rem; }
       .hero-stats { gap: 20px; flex-wrap: wrap; }
       .endpoint { flex-wrap: wrap; }
       .endpoint .desc { width: 100%; }
@@ -327,36 +323,35 @@
 <!-- ─── Hero ─── -->
 <section class="hero">
   <div class="container">
-    <div class="hero-badge">🍛 REST API • Free Tier • 20 Handcrafted Recipes</div>
     <h1>Filipino<span>Recipe</span> API</h1>
-    <p>Authentic Filipino recipes served as a REST API. From Adobo to Lechon Kawali — get structured recipe data with ingredients, instructions, and cooking times for your apps.</p>
-    <a href="#get-started" class="btn">Get Your Free API Key</a>
-    <a href="#endpoints" class="btn btn-outline">Browse Endpoints</a>
+    <p>Adobo, Sinigang, Lechon Kawali — 20 authentic Filipino dishes served as a REST API. Structured ingredients, instructions, and cooking times for your apps.</p>
+    <div class="hero-actions">
+      <a href="#get-started" class="btn">Get an API key</a>
+      <a href="#endpoints" class="btn btn-outline">Endpoints</a>
+    </div>
     <div class="hero-stats">
       <div><strong>20</strong><span>Recipes</span></div>
       <div><strong>6</strong><span>Categories</span></div>
-      <div><strong>100/day</strong><span>Free Tier</span></div>
+      <div><strong>100/day</strong><span>Free tier</span></div>
     </div>
   </div>
 </section>
 
-<!-- ─── Get Started / API Key ─── -->
+<!-- ─── Key Generator ─── -->
 <section id="get-started">
   <div class="container">
-    <h2>🚀 Get Started</h2>
-    <p class="sub">Generate your free API key in seconds. No credit card required.</p>
-
-    <div class="key-generator">
-      <h3>Generate Your API Key</h3>
-      <p>Enter your name (optional) and get instant access to all endpoints.</p>
-      <input type="text" id="nameInput" placeholder="Your name (optional)" maxlength="50">
-      <input type="email" id="emailInput" placeholder="Email (optional)" maxlength="100">
-      <button class="btn" id="generateBtn" onclick="generateKey()">🔑 Generate API Key</button>
+    <h2>Get an API key</h2>
+    <p class="sub">No signup, no credit card. Generate one in seconds.</p>
+    <div class="key-gen">
+      <h3>Generate a key</h3>
+      <p>Enter a name so you can remember which key this is.</p>
+      <input type="text" id="nameInput" placeholder="e.g. WaisCart app" maxlength="50">
+      <button class="btn" id="generateBtn" onclick="generateKey()">Generate API key</button>
       <div class="loader" id="loader"></div>
       <div class="key-output" id="keyOutput">
-        <strong>✅ API Key Generated!</strong>
+        <strong>Key generated</strong>
         <div class="key-value" id="keyValue"></div>
-        <p class="note">⚠️ Save this key — it won't be shown again. Use it in the <code>X-API-Key</code> header.</p>
+        <p class="note">Save this — it won't be shown again. Send it in the <code>X-API-Key</code> header.</p>
       </div>
     </div>
   </div>
@@ -365,56 +360,52 @@
 <!-- ─── Endpoints ─── -->
 <section id="endpoints">
   <div class="container">
-    <h2>📡 API Endpoints</h2>
-    <p class="sub">All endpoints require your API key in the <code>X-API-Key</code> header.</p>
-
-    <div class="endpoint-list">
-      <div class="endpoint">
-        <span class="method get">GET</span>
-        <span class="route">/api/recipes</span>
-        <span class="desc">List all recipes (paginated)</span>
-      </div>
-      <div class="endpoint">
-        <span class="method get">GET</span>
-        <span class="route">/api/recipes/:id</span>
-        <span class="desc">Get a single recipe by ID</span>
-      </div>
-      <div class="endpoint">
-        <span class="method get">GET</span>
-        <span class="route">/api/recipes/search?q=adobo</span>
-        <span class="desc">Search recipes by name or ingredient</span>
-      </div>
-      <div class="endpoint">
-        <span class="method get">GET</span>
-        <span class="route">/api/recipes/category/:category</span>
-        <span class="desc">Filter by category (e.g., "chicken", "pork")</span>
-      </div>
-      <div class="endpoint">
-        <span class="method get">GET</span>
-        <span class="route">/api/recipes/random</span>
-        <span class="desc">Get a random recipe</span>
-      </div>
-      <div class="endpoint">
-        <span class="method get">GET</span>
-        <span class="route">/api/categories</span>
-        <span class="desc">Get all categories with recipe counts</span>
-      </div>
-      <div class="endpoint">
-        <span class="method post">POST</span>
-        <span class="route">/api/register</span>
-        <span class="desc">Register for a new API key</span>
-      </div>
+    <h2>Endpoints</h2>
+    <p class="sub">All requests need your API key in the <code>X-API-Key</code> header.</p>
+    <div class="endpoint">
+      <span class="method get">GET</span>
+      <span class="route">/api/recipes</span>
+      <span class="desc">All recipes (paginated)</span>
+    </div>
+    <div class="endpoint">
+      <span class="method get">GET</span>
+      <span class="route">/api/recipes/:id</span>
+      <span class="desc">Single recipe by ID</span>
+    </div>
+    <div class="endpoint">
+      <span class="method get">GET</span>
+      <span class="route">/api/recipes/search?q=adobo</span>
+      <span class="desc">Search by name or ingredient</span>
+    </div>
+    <div class="endpoint">
+      <span class="method get">GET</span>
+      <span class="route">/api/recipes/category/:category</span>
+      <span class="desc">Filter by category (chicken, pork, …)</span>
+    </div>
+    <div class="endpoint">
+      <span class="method get">GET</span>
+      <span class="route">/api/recipes/random</span>
+      <span class="desc">Random recipe</span>
+    </div>
+    <div class="endpoint">
+      <span class="method get">GET</span>
+      <span class="route">/api/categories</span>
+      <span class="desc">Categories with recipe counts</span>
+    </div>
+    <div class="endpoint">
+      <span class="method post">POST</span>
+      <span class="route">/api/register</span>
+      <span class="desc">Register for a new key</span>
     </div>
   </div>
 </section>
 
-<!-- ─── Example Usage ─── -->
+<!-- ─── Usage ─── -->
 <section>
   <div class="container">
-    <h2>💻 Example Usage</h2>
-    <p class="sub">Try these commands with your API key (replace <code>YOUR_API_KEY</code>).</p>
+    <h2>Usage</h2>
+    <p class="sub">Replace <code>YOUR_API_KEY</code> with the key you generated above.</p>
 
-    <h3 style="margin-bottom: 8px; font-size: 1rem;">curl</h3>
     <div class="code-block">
       <pre>
 <span class="comment"># Get all recipes</span>
@@ -423,7 +414,7 @@ curl -H "X-API-Key: YOUR_API_KEY" <span id="baseUrlDisplay">https://api.waiscart
 <span class="comment"># Get recipe by ID</span>
 curl -H "X-API-Key: YOUR_API_KEY" <span id="baseUrlDisplay2">https://api.waiscart.ai.studio</span>/api/recipes/1
 
-<span class="comment"># Search for Adobo</span>
+<span class="comment"># Search for adobo</span>
 curl -H "X-API-Key: YOUR_API_KEY" <span id="baseUrlDisplay3">https://api.waiscart.ai.studio</span>/api/recipes/search?q=adobo
 
 <span class="comment"># Chicken recipes</span>
@@ -433,15 +424,13 @@ curl -H "X-API-Key: YOUR_API_KEY" <span id="baseUrlDisplay4">https://api.waiscar
 curl -H "X-API-Key: YOUR_API_KEY" <span id="baseUrlDisplay5">https://api.waiscart.ai.studio</span>/api/recipes/random</pre>
     </div>
 
-    <h3 style="margin-bottom: 8px; font-size: 1rem;">JavaScript (fetch)</h3>
     <div class="code-block">
       <pre>
-const response = await fetch('<span id="baseUrlDisplay6">https://api.waiscart.ai.studio</span>/api/recipes', {
-  headers: {
-    'X-API-Key': 'YOUR_API_KEY'
-  }
+<span class="comment">// JavaScript (fetch)</span>
+const res = await fetch('<span id="baseUrlDisplay6">https://api.waiscart.ai.studio</span>/api/recipes', {
+  headers: { 'X-API-Key': 'YOUR_API_KEY' }
 });
-const data = await response.json();
+const data = await res.json();
 console.log(data);</pre>
     </div>
   </div>
@@ -450,12 +439,10 @@ console.log(data);</pre>
 <!-- ─── Recipe Showcase ─── -->
 <section id="recipes">
   <div class="container">
-    <h2>🍽️ Featured Recipes</h2>
-    <p class="sub">Browse our collection of 20 authentic Filipino dishes.</p>
+    <h2>Featured recipes</h2>
+    <p class="sub">20 Filipino dishes with real images from Wikimedia Commons.</p>
     <div class="recipe-grid" id="recipeGrid">
-      <div style="text-align:center;color:var(--text-muted);padding:40px;">
-        <p>Loading recipes... (use your API key to fetch)</p>
-      </div>
+      <p style="color:var(--text-dim);text-align:center;padding:40px;">Generate an API key above to see all 20 recipes with images.</p>
     </div>
   </div>
 </section>
@@ -463,8 +450,8 @@ console.log(data);</pre>
 <!-- ─── Categories ─── -->
 <section>
   <div class="container">
-    <h2>📂 Recipe Categories</h2>
-    <p class="sub">20 hand-picked Filipino recipes across 5 categories.</p>
+    <h2>Categories</h2>
+    <p class="sub">20 recipes across 6 categories.</p>
     <div class="cat-grid">
       <div class="cat-card">
         <div class="emoji">🐔</div>
@@ -500,99 +487,53 @@ console.log(data);</pre>
   </div>
 </section>
 
-<!-- ─── Response Format ─── -->
-<section>
-  <div class="container">
-    <h2>📦 Response Format</h2>
-    <p class="sub">All responses follow a consistent JSON envelope.</p>
-    <div class="code-block">
-      <pre>
-{
-  "status": "success",
-  "count": 1,
-  "total": 20,
-  "page": 1,
-  "totalPages": 1,
-  "data": [
-    {
-      "id": 1,
-      "name": "Chicken Adobo",
-      "category": "Chicken",
-      "cuisine": "Filipino",
-      "difficulty": "Easy",
-      "prepTime": "10 min",
-      "cookTime": "40 min",
-      "servings": 4,
-      "image": "https://images.unsplash.com/...",
-      "keyIngredients": ["Chicken", "soy sauce", "vinegar", ...],
-      "ingredients": ["1 kg chicken...", "1/2 cup soy sauce...", ...],
-      "instructions": ["In a bowl...", "Heat oil...", ...],
-      "nutrition": {
-        "calories": 420,
-        "protein": "35g",
-        "carbs": "8g",
-        "fat": "28g"
-      }
-    }
-  ]
-}</pre>
-    </div>
-  </div>
-</section>
-
 <!-- ─── Footer ─── -->
 <footer>
   <div class="container">
-    <p>FilipinoRecipe API &mdash; Built with ❤️ for Filipino food lovers and developers everywhere.</p>
-    <p style="margin-top: 8px; font-size: 0.8rem;">Version 1.0.0</p>
+    <p>FilipinoRecipe API &mdash; built for <a href="https://waiscart.ai.studio" style="color:var(--accent);text-decoration:none;">WaisCart</a></p>
   </div>
 </footer>
 
 <script>
-async function generateKey() {
-  const btn = document.getElementById('generateBtn');
-  const loader = document.getElementById('loader');
-  const output = document.getElementById('keyOutput');
-  const keyValue = document.getElementById('keyValue');
-  const name = document.getElementById('nameInput').value.trim();
-  const email = document.getElementById('emailInput').value.trim();
-
-  btn.style.display = 'none';
-  loader.style.display = 'block';
-  output.style.display = 'none';
-
-  try {
-    const body = {};
-    if (name) body.name = name;
-    if (email) body.email = email;
-
-    const res = await fetch('/api/register', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(body)
-    });
-    const data = await res.json();
-
-    if (data.status === 'success') {
-      keyValue.textContent = data.data.api_key;
-      output.style.display = 'block';
-    } else {
-      alert('Error: ' + (data.message || 'Failed to generate key'));
-      btn.style.display = 'inline-block';
-    }
-  } catch (err) {
-    alert('Connection error: ' + err.message);
-    btn.style.display = 'inline-block';
-  } finally {
-    loader.style.display = 'none';
-  }
-}
-// Auto-detect base URL in code examples
+// Auto-detect base URL
 document.querySelectorAll('[id^="baseUrlDisplay"]').forEach(el => {
   el.textContent = window.location.origin;
 });
 
-// ─── Load Recipe Showcase ───
+// Generate API key
+async function generateKey() {
+  const name = document.getElementById('nameInput').value.trim() || 'anonymous';
+  const btn = document.getElementById('generateBtn');
+  const loader = document.getElementById('loader');
+  const output = document.getElementById('keyOutput');
+  const keyValue = document.getElementById('keyValue');
+
+  btn.disabled = true;
+  loader.style.display = 'block';
+  output.style.display = 'none';
+
+  try {
+    const res = await fetch('/api/register', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name })
+    });
+    const data = await res.json();
+    if (data.status === 'success') {
+      keyValue.textContent = data.data.api_key;
+      output.style.display = 'block';
+    } else {
+      alert('Error: ' + (data.message || 'Something went wrong'));
+    }
+  } catch (e) {
+    alert('Could not connect to the API. Is the server running?');
+  } finally {
+    btn.disabled = false;
+    loader.style.display = 'none';
+  }
+}
+
+// Load recipe showcase
 (async function loadRecipes() {
   const grid = document.getElementById('recipeGrid');
   if (!grid) return;
@@ -604,7 +545,7 @@ document.querySelectorAll('[id^="baseUrlDisplay"]').forEach(el => {
     if (data.status !== 'success') throw new Error(data.message);
     grid.innerHTML = data.data.map(r => `
       <div class="recipe-card">
-        <img src="${r.image}" alt="${r.name}" loading="lazy" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22600%22 height=%22400%22><rect fill=%22%232a2a45%22 width=%22600%22 height=%22400%22/><text fill=%22%239ca3af%22 font-size=%2224%22 x=%2250%%22 y=%2250%%22 text-anchor=%22middle%22 dy=%22.3em%22>${r.name}</text></svg>'">
+        <img src="${r.image}" alt="${r.name}" loading="lazy" onerror="this.parentElement.innerHTML='<div class=info style=padding:60px;text-align:center;color:var(--text-dim);font-size:0.85rem;>${r.name}</div>'">
         <div class="info">
           <h4>${r.name}</h4>
           <div class="meta">
@@ -619,7 +560,7 @@ document.querySelectorAll('[id^="baseUrlDisplay"]').forEach(el => {
       </div>
     `).join('');
   } catch (e) {
-    grid.innerHTML = '<p style="color:var(--text-muted);text-align:center;padding:40px;">Sign up for an API key to see all 20 recipes with images 🍛</p>';
+    // silently show placeholder
   }
 })();
 </script>
