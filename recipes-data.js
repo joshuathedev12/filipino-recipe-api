@@ -12,7 +12,7 @@ const recipes = [
     prepTime: "10 min",
     cookTime: "40 min",
     servings: 4,
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Adobo_DSCF4391.jpg/960px-Adobo_DSCF4391.jpg",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Adobo_Filipino_style.jpg/960px-Adobo_Filipino_style.jpg",
     keyIngredients: ["Chicken", "soy sauce", "vinegar", "garlic", "pepper", "bay leaf"],
     ingredients: [
       "1 kg chicken, cut into serving pieces",
@@ -134,7 +134,7 @@ const recipes = [
     prepTime: "15 min",
     cookTime: "25 min",
     servings: 4,
-    image: "https://images.unsplash.com/photo-1563379926898-05f4575a45d8?w=600&q=80",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/5912Tinanglarang_Tinola_with_Sotanghon_01.jpg/960px-5912Tinanglarang_Tinola_with_Sotanghon_01.jpg",
     keyIngredients: ["Chicken", "glass noodles", "garlic", "onion", "fish sauce", "carrots"],
     ingredients: [
       "250g chicken breast, shredded",
@@ -161,34 +161,31 @@ const recipes = [
   // ─── 🥩 PORK (5) ───
   {
     id: 6,
-    name: "Pork Sinigang",
+    name: "Lechon Manok",
     category: "Pork",
     cuisine: "Filipino",
-    difficulty: "Easy",
-    prepTime: "15 min",
-    cookTime: "50 min",
+    difficulty: "Medium",
+    prepTime: "20 min",
+    cookTime: "1 hr 15 min",
     servings: 4,
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/The_Best_Sinigang_Cuisine.jpg/960px-The_Best_Sinigang_Cuisine.jpg",
-    keyIngredients: ["Pork belly", "sinigang mix", "kangkong", "onion", "tomato", "sitaw"],
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Conching%27s_Native_Lechon_Manok.jpg/960px-Conching%27s_Native_Lechon_Manok.jpg",
+    keyIngredients: ["Whole chicken", "lemongrass", "garlic", "soy sauce", "patis", "annatto oil"],
     ingredients: [
-      "500g pork belly, cubed",
-      "1 packet sinigang sa sampaloc mix",
-      "1 bunch kangkong (water spinach)",
-      "1 onion, quartered",
-      "2 tomatoes, quartered",
-      "100g sitaw (string beans), cut into 2-inch pieces",
-      "1 radish (labanos), sliced",
-      "2-3 green chili peppers",
-      "6 cups water",
-      "Fish sauce (patis) to taste"
+      "1 whole chicken (about 1.5 kg)",
+      "4 stalks lemongrass, pounded",
+      "6 cloves garlic, crushed",
+      "3 tbsp soy sauce",
+      "2 tbsp fish sauce (patis)",
+      "1 tsp ground pepper",
+      "2 tbsp annatto oil (atsuete)",
+      "1 tsp salt"
     ],
     instructions: [
-      "Boil water in a pot. Add pork belly and onion. Simmer for 30-40 minutes until pork is tender.",
-      "Add tomatoes and radish. Cook for 5 minutes.",
-      "Pour in sinigang mix. Stir until dissolved.",
-      "Add sitaw and green chilies. Cook for 3 minutes.",
-      "Add kangkong. Turn off heat. Cover and let residual heat cook the leaves.",
-      "Season with fish sauce. Serve hot with steamed rice."
+      "Rub chicken inside and out with garlic, soy sauce, fish sauce, and pepper. Marinate for 2 hours.",
+      "Stuff the cavity with lemongrass stalks.",
+      "Brush the skin with annatto oil for the signature red-orange color.",
+      "Roast on a rotisserie or in a preheated 375°F (190°C) oven for 1 hour 15 minutes, basting occasionally.",
+      "Let rest for 10 minutes before chopping. Serve with liver sauce or sinamak (spiced vinegar)."
     ]
   },
   {
@@ -200,7 +197,7 @@ const recipes = [
     prepTime: "20 min",
     cookTime: "40 min",
     servings: 6,
-    image: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=600&q=80",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Menudo_%28Philippines%29_02.jpg/960px-Menudo_%28Philippines%29_02.jpg",
     keyIngredients: ["Pork kasim", "tomato sauce", "pork liver", "potato", "carrot", "bell pepper"],
     ingredients: [
       "500g pork kasim (shoulder), cubed",
@@ -226,32 +223,32 @@ const recipes = [
   },
   {
     id: 8,
-    name: "Binagoongang Baboy",
+    name: "Pork Adobo",
     category: "Pork",
     cuisine: "Filipino",
     difficulty: "Easy",
     prepTime: "10 min",
-    cookTime: "30 min",
+    cookTime: "45 min",
     servings: 4,
-    image: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=600&q=80",
-    keyIngredients: ["Pork belly", "shrimp paste", "garlic", "onion", "vinegar", "green chili"],
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Adobo_DSCF4391.jpg/960px-Adobo_DSCF4391.jpg",
+    keyIngredients: ["Pork belly", "soy sauce", "vinegar", "garlic", "bay leaf", "peppercorn"],
     ingredients: [
-      "500g pork belly, sliced into bite-sized pieces",
-      "3 tbsp bagoong alamang (shrimp paste)",
-      "5 cloves garlic, minced",
-      "1 onion, sliced",
-      "2 tbsp vinegar",
-      "3 green chili peppers",
-      "1/2 cup water",
+      "500g pork belly, cubed",
+      "1/2 cup soy sauce",
+      "1/3 cup vinegar",
+      "6 cloves garlic, crushed",
+      "3 bay leaves",
+      "1 tsp whole peppercorns",
+      "1 cup water",
       "2 tbsp cooking oil"
     ],
     instructions: [
-      "Heat oil in a pan. Sauté garlic and onion until fragrant.",
-      "Add pork belly and cook until browned.",
-      "Add bagoong alamang. Stir well and cook for 2 minutes.",
-      "Pour in water and vinegar. Bring to a boil.",
-      "Lower heat and simmer for 20 minutes until pork is tender and sauce thickens.",
-      "Add green chilies. Cook for 2 more minutes. Serve with steamed rice."
+      "Combine pork, soy sauce, garlic, and peppercorns in a bowl. Marinate for 30 minutes.",
+      "Heat oil in a pot. Brown the pork on all sides.",
+      "Pour in the marinade and water. Add bay leaves. Bring to a boil.",
+      "Lower heat, cover, and simmer for 30 minutes until pork is tender.",
+      "Add vinegar. Do not stir. Let it boil for 5 minutes without stirring.",
+      "Stir and simmer until sauce thickens. Serve with steamed rice."
     ]
   },
   {
@@ -321,29 +318,36 @@ const recipes = [
   // ─── 🐟 FISH & SEAFOOD (3) ───
   {
     id: 11,
-    name: "Daing na Bangus",
+    name: "Sweet and Sour Fish",
     category: "Fish & Seafood",
     cuisine: "Filipino",
-    difficulty: "Easy",
-    prepTime: "10 min",
-    cookTime: "15 min",
-    servings: 2,
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Daing_na_bangus.jpg/960px-Daing_na_bangus.jpg",
-    keyIngredients: ["Bangus", "salt", "garlic", "pepper", "oil", "vinegar"],
+    difficulty: "Medium",
+    prepTime: "15 min",
+    cookTime: "20 min",
+    servings: 3,
+    image: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=600&q=80",
+    keyIngredients: ["Fish fillet", "cornstarch", "bell pepper", "pineapple", "tomato sauce", "vinegar"],
     ingredients: [
-      "1 large bangus (milkfish), butterflied",
-      "1/2 cup vinegar",
-      "6 cloves garlic, crushed",
-      "1 tsp ground pepper",
-      "1 tsp salt",
+      "500g fish fillet (lapu-lapu or tilapia), sliced",
+      "1/2 cup cornstarch",
+      "1 red bell pepper, cubed",
+      "1 green bell pepper, cubed",
+      "1 onion, sliced",
+      "1/2 cup pineapple chunks",
+      "1/2 cup tomato sauce",
+      "3 tbsp vinegar",
+      "3 tbsp sugar",
+      "1/2 cup water",
+      "Salt and pepper to taste",
       "Cooking oil for frying"
     ],
     instructions: [
-      "Combine vinegar, garlic, pepper, and salt in a bowl.",
-      "Marinate the butterflied bangus in the mixture for at least 2 hours.",
-      "Heat oil in a pan over medium heat.",
-      "Fry the bangus (skin side down first) for 6-8 minutes per side until golden and crispy.",
-      "Drain on paper towels. Serve with steamed rice and extra vinegar dipping sauce."
+      "Season fish fillets with salt and pepper. Coat with cornstarch.",
+      "Heat oil and fry fish until golden and crispy. Drain and set aside.",
+      "In a separate pan, sauté onion and bell peppers.",
+      "Add tomato sauce, vinegar, sugar, pineapple chunks, and water. Simmer for 5 minutes.",
+      "Thicken with cornstarch slurry if needed. Adjust sweet-sour balance.",
+      "Pour sauce over fried fish or serve on the side. Serve with steamed rice."
     ]
   },
   {
@@ -355,7 +359,7 @@ const recipes = [
     prepTime: "10 min",
     cookTime: "20 min",
     servings: 3,
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/JfMalhacan9018MeycauayanCityfvf_06.JPG/960px-JfMalhacan9018MeycauayanCityfvf_06.JPG",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Paksiwjf.JPG/960px-Paksiwjf.JPG",
     keyIngredients: ["Bangus", "vinegar", "ginger", "garlic", "green chili", "ampalaya"],
     ingredients: [
       "1 medium bangus (milkfish), sliced into serving pieces",
@@ -384,7 +388,7 @@ const recipes = [
     prepTime: "30 min",
     cookTime: "30 min",
     servings: 4,
-    image: "https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=600&q=80",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Relyeno_Bangus.jpg/960px-Relyeno_Bangus.jpg",
     keyIngredients: ["Bangus", "carrots", "onion", "garlic", "raisins", "egg", "soy sauce"],
     ingredients: [
       "1 large bangus (milkfish), about 500g",
@@ -480,7 +484,7 @@ const recipes = [
     prepTime: "5 min",
     cookTime: "10 min",
     servings: 2,
-    image: "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=600&q=80",
+    image: "https://upload.wikimedia.org/wikipedia/commons/4/47/Adobong_kangkong_%28Philippines%29.jpg",
     keyIngredients: ["Kangkong", "soy sauce", "vinegar", "garlic", "chili"],
     ingredients: [
       "2 bunches kangkong (water spinach), cut into 3-inch pieces",
@@ -509,7 +513,7 @@ const recipes = [
     prepTime: "10 min",
     cookTime: "20 min",
     servings: 2,
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Beef_tapa_with_steamed_rice_and_sliced_tomato_and_cucumber.jpg/960px-Beef_tapa_with_steamed_rice_and_sliced_tomato_and_cucumber.jpg",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Tapsilog_Meal%2C_July_2025.jpg/960px-Tapsilog_Meal%2C_July_2025.jpg",
     keyIngredients: ["Beef tapa", "garlic rice", "egg", "soy sauce", "calamansi", "garlic"],
     ingredients: [
       "300g beef sirloin, thinly sliced",
@@ -569,7 +573,7 @@ const recipes = [
     prepTime: "15 min",
     cookTime: "15 min",
     servings: 4,
-    image: "https://images.unsplash.com/photo-1555126634-323283e090fa?w=600&q=80",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Pancit_Guisado.jpg/960px-Pancit_Guisado.jpg",
     keyIngredients: ["Pancit canton noodles", "soy sauce", "garlic", "carrots", "sayote", "sausage"],
     ingredients: [
       "500g pancit canton noodles",
@@ -601,7 +605,7 @@ const recipes = [
     prepTime: "30 min",
     cookTime: "15 min",
     servings: "6 (makes ~30 pieces)",
-    image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80",
+    image: "https://upload.wikimedia.org/wikipedia/commons/9/95/Lumpiang_Shanghai_%28Philippines%29.jpg",
     keyIngredients: ["Ground pork", "carrots", "onion", "garlic", "lumpia wrapper", "soy sauce"],
     ingredients: [
       "500g ground pork",
