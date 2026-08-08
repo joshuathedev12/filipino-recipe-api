@@ -12,7 +12,7 @@ const recipes = [
     prepTime: "10 min",
     cookTime: "40 min",
     servings: 4,
-    image: "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?w=600&q=80",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Adobo_DSCF4391.jpg/960px-Adobo_DSCF4391.jpg",
     keyIngredients: ["Chicken", "soy sauce", "vinegar", "garlic", "pepper", "bay leaf"],
     ingredients: [
       "1 kg chicken, cut into serving pieces",
@@ -42,7 +42,7 @@ const recipes = [
     prepTime: "15 min",
     cookTime: "35 min",
     servings: 4,
-    image: "https://images.unsplash.com/photo-1598103442097-8b74394b95c6?w=600&q=80",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Chicken_tinola.jpg/960px-Chicken_tinola.jpg",
     keyIngredients: ["Chicken", "ginger", "garlic", "sayote", "fish sauce", "malunggay"],
     ingredients: [
       "1 kg chicken, cut into pieces",
@@ -73,7 +73,7 @@ const recipes = [
     prepTime: "10 min",
     cookTime: "15 min",
     servings: 3,
-    image: "https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=600&q=80",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/09530jfCuisine_Foods_Fruits_Philippines_Baliuag_Bulacanfvf_22.jpg/960px-09530jfCuisine_Foods_Fruits_Philippines_Baliuag_Bulacanfvf_22.jpg",
     keyIngredients: ["Chicken", "day-old rice", "garlic", "spring onions", "soy sauce", "salt"],
     ingredients: [
       "2 cups day-old cooked rice, cold",
@@ -102,7 +102,7 @@ const recipes = [
     prepTime: "10 min",
     cookTime: "45 min",
     servings: 4,
-    image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&q=80",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Home_-_Dinner.jpg/960px-Home_-_Dinner.jpg",
     keyIngredients: ["Chicken", "rice", "ginger", "garlic", "fish sauce", "calamansi", "toasted garlic"],
     ingredients: [
       "500g chicken, cut into pieces",
@@ -168,7 +168,7 @@ const recipes = [
     prepTime: "15 min",
     cookTime: "50 min",
     servings: 4,
-    image: "https://images.unsplash.com/photo-1544025162-d76694265947?w=600&q=80",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/The_Best_Sinigang_Cuisine.jpg/960px-The_Best_Sinigang_Cuisine.jpg",
     keyIngredients: ["Pork belly", "sinigang mix", "kangkong", "onion", "tomato", "sitaw"],
     ingredients: [
       "500g pork belly, cubed",
@@ -263,7 +263,7 @@ const recipes = [
     prepTime: "15 min",
     cookTime: "30 min",
     servings: 4,
-    image: "https://images.unsplash.com/photo-1559563458-527698bf5295?w=600&q=80",
+    image: "https://upload.wikimedia.org/wikipedia/commons/c/cc/Lechon_Kawali.jpg",
     keyIngredients: ["Pork liempo", "salt", "pepper", "garlic", "bay leaf", "water"],
     ingredients: [
       "1 kg pork liempo (belly), whole slab",
@@ -293,7 +293,7 @@ const recipes = [
     prepTime: "10 min",
     cookTime: "50 min",
     servings: 4,
-    image: "https://images.unsplash.com/photo-1476124369491-e7addf5db371?w=600&q=80",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Humba_%28Philippines%29.jpg/960px-Humba_%28Philippines%29.jpg",
     keyIngredients: ["Pork belly", "soy sauce", "vinegar", "garlic", "star anise", "saba banana"],
     ingredients: [
       "500g pork belly, cubed",
@@ -328,7 +328,7 @@ const recipes = [
     prepTime: "10 min",
     cookTime: "15 min",
     servings: 2,
-    image: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=600&q=80",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Daing_na_bangus.jpg/960px-Daing_na_bangus.jpg",
     keyIngredients: ["Bangus", "salt", "garlic", "pepper", "oil", "vinegar"],
     ingredients: [
       "1 large bangus (milkfish), butterflied",
@@ -355,7 +355,7 @@ const recipes = [
     prepTime: "10 min",
     cookTime: "20 min",
     servings: 3,
-    image: "https://images.unsplash.com/photo-1534604973900-c43ab4c2e0ab?w=600&q=80",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/JfMalhacan9018MeycauayanCityfvf_06.JPG/960px-JfMalhacan9018MeycauayanCityfvf_06.JPG",
     keyIngredients: ["Bangus", "vinegar", "ginger", "garlic", "green chili", "ampalaya"],
     ingredients: [
       "1 medium bangus (milkfish), sliced into serving pieces",
@@ -417,7 +417,7 @@ const recipes = [
     prepTime: "15 min",
     cookTime: "20 min",
     servings: 4,
-    image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&q=80",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Pinakbet_ni_Lakay_Jesse.jpg/960px-Pinakbet_ni_Lakay_Jesse.jpg",
     keyIngredients: ["Kalabasa", "sitaw", "talong", "ampalaya", "okra", "bagoong", "garlic", "tomato"],
     ingredients: [
       "1 cup kalabasa (pumpkin), cubed",
@@ -450,7 +450,7 @@ const recipes = [
     prepTime: "10 min",
     cookTime: "40 min",
     servings: 4,
-    image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&q=80",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Monggojf.JPG/960px-Monggojf.JPG",
     keyIngredients: ["Munggo", "garlic", "onion", "tomato", "chicharon", "fish sauce"],
     ingredients: [
       "1 cup munggo (mung beans), rinsed",
@@ -509,7 +509,7 @@ const recipes = [
     prepTime: "10 min",
     cookTime: "20 min",
     servings: 2,
-    image: "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?w=600&q=80",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Beef_tapa_with_steamed_rice_and_sliced_tomato_and_cucumber.jpg/960px-Beef_tapa_with_steamed_rice_and_sliced_tomato_and_cucumber.jpg",
     keyIngredients: ["Beef tapa", "garlic rice", "egg", "soy sauce", "calamansi", "garlic"],
     ingredients: [
       "300g beef sirloin, thinly sliced",
@@ -540,7 +540,7 @@ const recipes = [
     prepTime: "5 min",
     cookTime: "25 min",
     servings: 4,
-    image: "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=600&q=80",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Champorado.jpg/960px-Champorado.jpg",
     keyIngredients: ["Glutinous rice", "cocoa powder", "sugar", "milk", "tuyo"],
     ingredients: [
       "1 cup glutinous rice (malagkit)",
