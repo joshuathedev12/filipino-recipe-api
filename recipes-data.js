@@ -12,7 +12,7 @@ const recipes = [
     prepTime: "10 min",
     cookTime: "40 min",
     servings: 4,
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Adobo_Filipino_style.jpg/960px-Adobo_Filipino_style.jpg",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Filipino_Chicken_Adobo_1.jpg/960px-Filipino_Chicken_Adobo_1.jpg",
     keyIngredients: ["Chicken", "soy sauce", "vinegar", "garlic", "pepper", "bay leaf"],
     ingredients: [
       "1 kg chicken, cut into serving pieces",
@@ -168,7 +168,7 @@ const recipes = [
     prepTime: "20 min",
     cookTime: "1 hr 15 min",
     servings: 4,
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Conching%27s_Native_Lechon_Manok.jpg/960px-Conching%27s_Native_Lechon_Manok.jpg",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Lechon_Manok_%28Taichung%29%2C_Nov_2024.jpg/960px-Lechon_Manok_%28Taichung%29%2C_Nov_2024.jpg",
     keyIngredients: ["Whole chicken", "lemongrass", "garlic", "soy sauce", "patis", "annatto oil"],
     ingredients: [
       "1 whole chicken (about 1.5 kg)",
@@ -197,7 +197,7 @@ const recipes = [
     prepTime: "20 min",
     cookTime: "40 min",
     servings: 6,
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Menudo_%28Philippines%29_02.jpg/960px-Menudo_%28Philippines%29_02.jpg",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Menudo_Filipino_Food.jpg/960px-Menudo_Filipino_Food.jpg",
     keyIngredients: ["Pork kasim", "tomato sauce", "pork liver", "potato", "carrot", "bell pepper"],
     ingredients: [
       "500g pork kasim (shoulder), cubed",
@@ -325,7 +325,7 @@ const recipes = [
     prepTime: "15 min",
     cookTime: "20 min",
     servings: 3,
-    image: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=600&q=80",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Iskabecheng_Maya-Maya_%28Sweet_and_Sour_Fish%29.jpg/960px-Iskabecheng_Maya-Maya_%28Sweet_and_Sour_Fish%29.jpg",
     keyIngredients: ["Fish fillet", "cornstarch", "bell pepper", "pineapple", "tomato sauce", "vinegar"],
     ingredients: [
       "500g fish fillet (lapu-lapu or tilapia), sliced",
@@ -359,7 +359,7 @@ const recipes = [
     prepTime: "10 min",
     cookTime: "20 min",
     servings: 3,
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Paksiwjf.JPG/960px-Paksiwjf.JPG",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Food_delicacies_of_Bulakan_01.jpg/960px-Food_delicacies_of_Bulakan_01.jpg",
     keyIngredients: ["Bangus", "vinegar", "ginger", "garlic", "green chili", "ampalaya"],
     ingredients: [
       "1 medium bangus (milkfish), sliced into serving pieces",
@@ -513,7 +513,7 @@ const recipes = [
     prepTime: "10 min",
     cookTime: "20 min",
     servings: 2,
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Tapsilog_Meal%2C_July_2025.jpg/960px-Tapsilog_Meal%2C_July_2025.jpg",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Tapsilog%2C_Mar_2026.jpg/960px-Tapsilog%2C_Mar_2026.jpg",
     keyIngredients: ["Beef tapa", "garlic rice", "egg", "soy sauce", "calamansi", "garlic"],
     ingredients: [
       "300g beef sirloin, thinly sliced",
