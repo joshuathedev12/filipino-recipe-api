@@ -1,6 +1,5 @@
 /**
- * Filipino Recipe Database — 20 curated Filipino dishes
- * Structured to look like it came from a real external API
+ * Filipino Recipe Database — 20 authentic Filipino dishes
  */
 const recipes = [
   // ─── 🐔 CHICKEN (5) ───
@@ -32,8 +31,7 @@ const recipes = [
       "Lower heat, cover, and simmer for 30 minutes or until chicken is tender.",
       "Add vinegar. Do not stir. Let it boil for 5 minutes without stirring.",
       "Stir and continue cooking until sauce thickens. Serve with steamed rice."
-    ],
-    nutrition: { calories: 420, protein: "35g", carbs: "8g", fat: "28g" }
+    ]
   },
   {
     id: 2,
@@ -45,7 +43,7 @@ const recipes = [
     cookTime: "35 min",
     servings: 4,
     image: "https://images.unsplash.com/photo-1598103442097-8b74394b95c6?w=600&q=80",
-    keyIngredients: ["Chicken", "ginger", "garlic", "sayote/papaya", "fish sauce", "dahon ng sili"],
+    keyIngredients: ["Chicken", "ginger", "garlic", "sayote", "fish sauce", "malunggay"],
     ingredients: [
       "1 kg chicken, cut into pieces",
       "1 thumb-sized ginger, julienned",
@@ -54,22 +52,21 @@ const recipes = [
       "1 sayote (chayote), cubed",
       "2 cups water or chicken broth",
       "2 tbsp fish sauce (patis)",
-      "1 bunch chili leaves (dahon ng sili)",
+      "1 bunch malunggay leaves",
       "2 tbsp cooking oil"
     ],
     instructions: [
       "Heat oil in a pot. Sauté garlic, onion, and ginger until fragrant.",
       "Add chicken and cook until lightly browned.",
       "Pour in fish sauce and stir for 1 minute.",
-      "Add water or broth. Bring to a boil, then lower heat and simmer for 20 minutes.",
+      "Add water or broth. Bring to a boil, then lower heat and simmer for 25 minutes.",
       "Add sayote and cook until tender (about 8-10 minutes).",
-      "Season with salt and pepper if needed. Add chili leaves, turn off heat, and cover for 2 minutes. Serve hot."
-    ],
-    nutrition: { calories: 380, protein: "32g", carbs: "12g", fat: "22g" }
+      "Season with salt and pepper. Add malunggay leaves, turn off heat, and cover for 2 minutes. Serve hot."
+    ]
   },
   {
     id: 3,
-    name: "Chicken Fried Rice",
+    name: "Sinangag na Manok",
     category: "Chicken",
     cuisine: "Filipino",
     difficulty: "Easy",
@@ -77,28 +74,24 @@ const recipes = [
     cookTime: "15 min",
     servings: 3,
     image: "https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=600&q=80",
-    keyIngredients: ["Chicken", "rice", "garlic", "egg", "soy sauce", "scallions"],
+    keyIngredients: ["Chicken", "day-old rice", "garlic", "spring onions", "soy sauce", "salt"],
     ingredients: [
-      "2 cups cooked cold rice (day-old works best)",
-      "1 cup cooked chicken, shredded or diced",
-      "3 cloves garlic, minced",
-      "2 eggs, beaten",
+      "2 cups day-old cooked rice, cold",
+      "1 cup leftover cooked chicken, shredded",
+      "6 cloves garlic, minced",
+      "3 stalks spring onions, chopped",
       "2 tbsp soy sauce",
-      "1/2 tsp sesame oil (optional)",
-      "3 stalks scallions, chopped",
-      "2 tbsp cooking oil",
-      "Salt and pepper to taste"
+      "1/2 tsp salt",
+      "3 tbsp cooking oil"
     ],
     instructions: [
       "Heat oil in a wok or large pan over high heat.",
-      "Sauté garlic until golden brown.",
-      "Add chicken and stir-fry for 2 minutes. Push to the side.",
-      "Pour beaten eggs into the pan and scramble until cooked.",
-      "Add rice, breaking up any clumps. Stir-fry for 3-4 minutes.",
-      "Drizzle soy sauce and sesame oil. Toss until evenly colored.",
-      "Season with salt and pepper. Top with scallions. Serve hot."
-    ],
-    nutrition: { calories: 450, protein: "28g", carbs: "45g", fat: "18g" }
+      "Sauté garlic until golden brown and crispy.",
+      "Add shredded chicken and stir-fry for 2 minutes.",
+      "Add rice, breaking up any clumps. Stir-fry for 4-5 minutes, tossing continuously.",
+      "Drizzle soy sauce and season with salt. Toss until evenly colored.",
+      "Top with spring onions. Serve hot."
+    ]
   },
   {
     id: 4,
@@ -110,10 +103,10 @@ const recipes = [
     cookTime: "45 min",
     servings: 4,
     image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&q=80",
-    keyIngredients: ["Chicken", "rice", "ginger", "garlic", "fish sauce", "calamansi", "egg"],
+    keyIngredients: ["Chicken", "rice", "ginger", "garlic", "fish sauce", "calamansi", "toasted garlic"],
     ingredients: [
       "500g chicken, cut into pieces",
-      "1 cup glutinous rice (malagkit)",
+      "1 cup regular rice (not glutinous)",
       "1 thumb ginger, julienned",
       "4 cloves garlic, minced",
       "1 onion, chopped",
@@ -121,7 +114,7 @@ const recipes = [
       "2 tbsp fish sauce (patis)",
       "2 hard-boiled eggs, sliced",
       "Calamansi or lemon wedges",
-      "Fried garlic, scallions for garnish"
+      "Toasted garlic and scallions for garnish"
     ],
     instructions: [
       "Sauté garlic, onion, and ginger in oil until fragrant.",
@@ -129,13 +122,12 @@ const recipes = [
       "Pour in fish sauce and stir. Add rice and water. Bring to a boil.",
       "Lower heat and simmer for 30-40 minutes, stirring occasionally, until rice is soft and porridge-like.",
       "Season with salt and pepper. Adjust consistency with more water if needed.",
-      "Serve in bowls topped with sliced egg, fried garlic, scallions, and calamansi on the side."
-    ],
-    nutrition: { calories: 400, protein: "30g", carbs: "50g", fat: "12g" }
+      "Serve in bowls topped with sliced egg, toasted garlic, scallions, and calamansi on the side."
+    ]
   },
   {
     id: 5,
-    name: "Chicken Sotanghon",
+    name: "Sotanghon na Manok",
     category: "Chicken",
     cuisine: "Filipino",
     difficulty: "Medium",
@@ -143,10 +135,10 @@ const recipes = [
     cookTime: "25 min",
     servings: 4,
     image: "https://images.unsplash.com/photo-1563379926898-05f4575a45d8?w=600&q=80",
-    keyIngredients: ["Chicken", "glass noodles", "garlic", "onion", "patis", "carrots"],
+    keyIngredients: ["Chicken", "glass noodles", "garlic", "onion", "fish sauce", "carrots"],
     ingredients: [
       "250g chicken breast, shredded",
-      "200g sotanghon (glass noodles), soaked in water",
+      "200g sotanghon (glass noodles), soaked in water until soft",
       "4 cloves garlic, minced",
       "1 onion, chopped",
       "1 carrot, julienned",
@@ -154,7 +146,7 @@ const recipes = [
       "2 tbsp fish sauce (patis)",
       "4 cups chicken broth",
       "2 tbsp cooking oil",
-      "Scallions and fried garlic for garnish"
+      "Scallions and toasted garlic for garnish"
     ],
     instructions: [
       "Heat oil in a pot. Sauté garlic and onion until fragrant.",
@@ -162,9 +154,8 @@ const recipes = [
       "Pour in fish sauce and broth. Bring to a boil.",
       "Add soaked sotanghon noodles. Cook for 5-7 minutes until tender.",
       "Add carrots and cabbage. Cook for 2 more minutes.",
-      "Season with salt and pepper. Garnish with scallions and fried garlic. Serve hot."
-    ],
-    nutrition: { calories: 320, protein: "22g", carbs: "35g", fat: "10g" }
+      "Season with salt and pepper. Garnish with scallions and toasted garlic. Serve hot."
+    ]
   },
 
   // ─── 🥩 PORK (5) ───
@@ -187,7 +178,7 @@ const recipes = [
       "2 tomatoes, quartered",
       "100g sitaw (string beans), cut into 2-inch pieces",
       "1 radish (labanos), sliced",
-      "2-3 green chili peppers (siling pang-sigang)",
+      "2-3 green chili peppers",
       "6 cups water",
       "Fish sauce (patis) to taste"
     ],
@@ -198,8 +189,7 @@ const recipes = [
       "Add sitaw and green chilies. Cook for 3 minutes.",
       "Add kangkong. Turn off heat. Cover and let residual heat cook the leaves.",
       "Season with fish sauce. Serve hot with steamed rice."
-    ],
-    nutrition: { calories: 480, protein: "25g", carbs: "15g", fat: "35g" }
+    ]
   },
   {
     id: 7,
@@ -211,7 +201,7 @@ const recipes = [
     cookTime: "40 min",
     servings: 6,
     image: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=600&q=80",
-    keyIngredients: ["Pork kasim", "tomato sauce", "liver", "potato", "carrot", "bell pepper"],
+    keyIngredients: ["Pork kasim", "tomato sauce", "pork liver", "potato", "carrot", "bell pepper"],
     ingredients: [
       "500g pork kasim (shoulder), cubed",
       "200g pork liver, cubed",
@@ -232,12 +222,11 @@ const recipes = [
       "Add potatoes and carrots. Cook for 8 minutes.",
       "Add liver and bell pepper. Cook for 5 more minutes.",
       "Season with salt, pepper, and a pinch of sugar. Serve hot."
-    ],
-    nutrition: { calories: 440, protein: "30g", carbs: "20g", fat: "28g" }
+    ]
   },
   {
     id: 8,
-    name: "Pork Binagoongan",
+    name: "Binagoongang Baboy",
     category: "Pork",
     cuisine: "Filipino",
     difficulty: "Easy",
@@ -245,14 +234,14 @@ const recipes = [
     cookTime: "30 min",
     servings: 4,
     image: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=600&q=80",
-    keyIngredients: ["Pork belly", "bagoong alamang", "garlic", "onion", "vinegar", "siling pang-sigang"],
+    keyIngredients: ["Pork belly", "shrimp paste", "garlic", "onion", "vinegar", "green chili"],
     ingredients: [
       "500g pork belly, sliced into bite-sized pieces",
       "3 tbsp bagoong alamang (shrimp paste)",
       "5 cloves garlic, minced",
       "1 onion, sliced",
       "2 tbsp vinegar",
-      "3 green chili peppers (siling pang-sigang)",
+      "3 green chili peppers",
       "1/2 cup water",
       "2 tbsp cooking oil"
     ],
@@ -263,8 +252,7 @@ const recipes = [
       "Pour in water and vinegar. Bring to a boil.",
       "Lower heat and simmer for 20 minutes until pork is tender and sauce thickens.",
       "Add green chilies. Cook for 2 more minutes. Serve with steamed rice."
-    ],
-    nutrition: { calories: 520, protein: "22g", carbs: "6g", fat: "45g" }
+    ]
   },
   {
     id: 9,
@@ -272,11 +260,11 @@ const recipes = [
     category: "Pork",
     cuisine: "Filipino",
     difficulty: "Medium",
-    prepTime: "10 min (+ overnight marination)",
+    prepTime: "15 min",
     cookTime: "30 min",
     servings: 4,
     image: "https://images.unsplash.com/photo-1559563458-527698bf5295?w=600&q=80",
-    keyIngredients: ["Pork liempo", "salt", "pepper", "garlic", "water"],
+    keyIngredients: ["Pork liempo", "salt", "pepper", "garlic", "bay leaf", "water"],
     ingredients: [
       "1 kg pork liempo (belly), whole slab",
       "1 tbsp salt",
@@ -294,8 +282,7 @@ const recipes = [
       "Cut pork into serving pieces.",
       "Heat oil in a deep pan. Deep fry pieces until golden and crispy (about 8-10 minutes).",
       "Drain on paper towels. Serve with lechon sauce or vinegar dipping sauce."
-    ],
-    nutrition: { calories: 650, protein: "28g", carbs: "2g", fat: "58g" }
+    ]
   },
   {
     id: 10,
@@ -307,13 +294,14 @@ const recipes = [
     cookTime: "50 min",
     servings: 4,
     image: "https://images.unsplash.com/photo-1476124369491-e7addf5db371?w=600&q=80",
-    keyIngredients: ["Pork belly", "soy sauce", "vinegar", "garlic", "laurel", "saging na saba"],
+    keyIngredients: ["Pork belly", "soy sauce", "vinegar", "garlic", "star anise", "saba banana"],
     ingredients: [
       "500g pork belly, cubed",
       "1/4 cup soy sauce",
       "1/4 cup vinegar",
       "6 cloves garlic, crushed",
-      "3 bay leaves (laurel)",
+      "3 bay leaves",
+      "2 star anise pods",
       "2 saging na saba (plantain bananas), sliced",
       "1/2 tsp whole peppercorns",
       "1 cup water",
@@ -323,12 +311,11 @@ const recipes = [
     instructions: [
       "Heat oil in a pot. Sauté garlic until golden.",
       "Add pork and cook until lightly browned.",
-      "Pour in soy sauce, vinegar, and water. Add bay leaves and peppercorns.",
+      "Pour in soy sauce, vinegar, and water. Add bay leaves, star anise, and peppercorns.",
       "Bring to a boil, then lower heat and simmer for 40 minutes until pork is very tender.",
       "Add saba bananas and sugar. Cook for 5 more minutes.",
       "Adjust seasoning. Serve hot with steamed rice."
-    ],
-    nutrition: { calories: 510, protein: "24g", carbs: "18g", fat: "38g" }
+    ]
   },
 
   // ─── 🐟 FISH & SEAFOOD (3) ───
@@ -338,11 +325,11 @@ const recipes = [
     category: "Fish & Seafood",
     cuisine: "Filipino",
     difficulty: "Easy",
-    prepTime: "10 min (+ 2hr marination)",
+    prepTime: "10 min",
     cookTime: "15 min",
     servings: 2,
     image: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=600&q=80",
-    keyIngredients: ["Bangus", "vinegar", "garlic", "pepper", "oil"],
+    keyIngredients: ["Bangus", "salt", "garlic", "pepper", "oil", "vinegar"],
     ingredients: [
       "1 large bangus (milkfish), butterflied",
       "1/2 cup vinegar",
@@ -356,9 +343,8 @@ const recipes = [
       "Marinate the butterflied bangus in the mixture for at least 2 hours.",
       "Heat oil in a pan over medium heat.",
       "Fry the bangus (skin side down first) for 6-8 minutes per side until golden and crispy.",
-      "Drain on paper towels. Serve with steamed rice and vinegar dipping sauce."
-    ],
-    nutrition: { calories: 350, protein: "32g", carbs: "3g", fat: "22g" }
+      "Drain on paper towels. Serve with steamed rice and extra vinegar dipping sauce."
+    ]
   },
   {
     id: 12,
@@ -370,13 +356,13 @@ const recipes = [
     cookTime: "20 min",
     servings: 3,
     image: "https://images.unsplash.com/photo-1534604973900-c43ab4c2e0ab?w=600&q=80",
-    keyIngredients: ["Bangus", "vinegar", "ginger", "garlic", "siling pang-sigang", "ampalaya"],
+    keyIngredients: ["Bangus", "vinegar", "ginger", "garlic", "green chili", "ampalaya"],
     ingredients: [
       "1 medium bangus (milkfish), sliced into serving pieces",
       "1 cup vinegar",
       "1 thumb ginger, sliced",
       "4 cloves garlic, crushed",
-      "2 green chili peppers (siling pang-sigang)",
+      "2 green chili peppers",
       "1 small ampalaya (bitter gourd), sliced",
       "1 cup water",
       "1 tsp salt and pepper"
@@ -387,42 +373,38 @@ const recipes = [
       "Lower heat and simmer for 10 minutes.",
       "Add green chilies and ampalaya. Cook for 5 more minutes.",
       "Serve hot with steamed rice."
-    ],
-    nutrition: { calories: 280, protein: "30g", carbs: "5g", fat: "15g" }
+    ]
   },
   {
     id: 13,
-    name: "Sweet & Sour Fish",
+    name: "Relyenong Bangus",
     category: "Fish & Seafood",
     cuisine: "Filipino",
-    difficulty: "Medium",
-    prepTime: "15 min",
-    cookTime: "20 min",
-    servings: 3,
+    difficulty: "Hard",
+    prepTime: "30 min",
+    cookTime: "30 min",
+    servings: 4,
     image: "https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=600&q=80",
-    keyIngredients: ["Bangus fillet", "flour", "tomato sauce", "vinegar", "sugar", "bell pepper"],
+    keyIngredients: ["Bangus", "carrots", "onion", "garlic", "raisins", "egg", "soy sauce"],
     ingredients: [
-      "500g bangus fillet, sliced into strips",
-      "1 cup all-purpose flour",
-      "1 egg, beaten",
-      "1/2 cup tomato sauce",
-      "3 tbsp vinegar",
-      "2 tbsp sugar",
-      "1/2 cup water",
-      "1 red bell pepper, diced",
-      "1 green bell pepper, diced",
-      "1 onion, sliced",
+      "1 large bangus (milkfish), about 500g",
+      "1 carrot, minced",
+      "1 onion, chopped",
+      "4 cloves garlic, minced",
+      "2 tbsp raisins",
+      "2 eggs, beaten",
+      "2 tbsp soy sauce",
       "Salt and pepper to taste",
       "Cooking oil for frying"
     ],
     instructions: [
-      "Season fish strips with salt and pepper. Dip in beaten egg, then coat with flour.",
-      "Deep fry until golden brown. Set aside.",
-      "In a separate pan, sauté onion and bell peppers.",
-      "Add tomato sauce, vinegar, sugar, and water. Simmer for 5 minutes until sauce thickens.",
-      "Pour sauce over fried fish or serve on the side. Serve hot."
-    ],
-    nutrition: { calories: 380, protein: "28g", carbs: "30g", fat: "16g" }
+      "Scrape the meat from the bangus, keeping the skin intact.",
+      "Debone the fish meat and flake it into a bowl.",
+      "Mix fish meat with carrot, onion, garlic, raisins, beaten egg, and soy sauce.",
+      "Stuff the mixture back into the fish skin. Sew or secure the opening.",
+      "Steam the stuffed fish for 15 minutes, then let it cool.",
+      "Pan-fry until golden on both sides. Slice and serve."
+    ]
   },
 
   // ─── 🥬 VEGETABLES (3) ───
@@ -436,14 +418,14 @@ const recipes = [
     cookTime: "20 min",
     servings: 4,
     image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&q=80",
-    keyIngredients: ["Kalabasa", "sitaw", "talong", "ampalaya", "okra", "bagoong", "garlic", "onion", "tomato"],
+    keyIngredients: ["Kalabasa", "sitaw", "talong", "ampalaya", "okra", "bagoong", "garlic", "tomato"],
     ingredients: [
       "1 cup kalabasa (pumpkin), cubed",
       "100g sitaw (string beans), cut into 2-inch pieces",
       "1 talong (eggplant), sliced",
       "1 small ampalaya (bitter gourd), sliced",
       "100g okra, halved",
-      "3 tbsp bagoong isda (fermented fish) or bagoong alamang",
+      "3 tbsp bagoong isda (fermented fish)",
       "4 cloves garlic, minced",
       "1 onion, sliced",
       "2 tomatoes, chopped",
@@ -457,8 +439,7 @@ const recipes = [
       "Add sitaw, talong, ampalaya, and okra. Do not stir too much.",
       "Cover and cook for 8-10 minutes until vegetables are tender.",
       "Gently toss. Serve hot with steamed rice."
-    ],
-    nutrition: { calories: 180, protein: "8g", carbs: "22g", fat: "8g" }
+    ]
   },
   {
     id: 15,
@@ -466,17 +447,17 @@ const recipes = [
     category: "Vegetables",
     cuisine: "Filipino",
     difficulty: "Easy",
-    prepTime: "10 min (+ overnight soaking)",
+    prepTime: "10 min",
     cookTime: "40 min",
     servings: 4,
     image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&q=80",
-    keyIngredients: ["Munggo", "garlic", "onion", "tomato", "chicharon/bagnet", "patis"],
+    keyIngredients: ["Munggo", "garlic", "onion", "tomato", "chicharon", "fish sauce"],
     ingredients: [
       "1 cup munggo (mung beans), rinsed",
       "4 cloves garlic, minced",
       "1 onion, chopped",
       "2 tomatoes, chopped",
-      "1/2 cup crushed chicharon or bagnet",
+      "1/2 cup crushed chicharon",
       "2 tbsp fish sauce (patis)",
       "4 cups water",
       "2 tbsp cooking oil",
@@ -487,9 +468,8 @@ const recipes = [
       "In a separate pot, heat oil and sauté garlic, onion, and tomatoes.",
       "Add cooked munggo and fish sauce. Stir well.",
       "Add malunggay leaves if using. Cook for 3 minutes.",
-      "Top with crushed chicharon or bagnet. Serve hot with steamed rice."
-    ],
-    nutrition: { calories: 310, protein: "18g", carbs: "35g", fat: "12g" }
+      "Top with crushed chicharon. Serve hot with steamed rice."
+    ]
   },
   {
     id: 16,
@@ -501,7 +481,7 @@ const recipes = [
     cookTime: "10 min",
     servings: 2,
     image: "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=600&q=80",
-    keyIngredients: ["Kangkong", "soy sauce", "vinegar", "garlic", "siling labuyo"],
+    keyIngredients: ["Kangkong", "soy sauce", "vinegar", "garlic", "chili"],
     ingredients: [
       "2 bunches kangkong (water spinach), cut into 3-inch pieces",
       "3 tbsp soy sauce",
@@ -516,8 +496,7 @@ const recipes = [
       "Add kangkong stalks first (cook for 1 minute), then add leaves.",
       "Pour in soy sauce and vinegar. Toss quickly.",
       "Cook for 2 minutes until kangkong is wilted but still vibrant. Serve immediately."
-    ],
-    nutrition: { calories: 120, protein: "5g", carbs: "8g", fat: "8g" }
+    ]
   },
 
   // ─── 🥟 BREAKFAST & SILOG (2) ───
@@ -527,15 +506,15 @@ const recipes = [
     category: "Breakfast & Silog",
     cuisine: "Filipino",
     difficulty: "Medium",
-    prepTime: "10 min (+ overnight marination)",
+    prepTime: "10 min",
     cookTime: "20 min",
     servings: 2,
     image: "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?w=600&q=80",
-    keyIngredients: ["Beef tapa", "garlic rice", "egg", "soy sauce", "vinegar", "garlic"],
+    keyIngredients: ["Beef tapa", "garlic rice", "egg", "soy sauce", "calamansi", "garlic"],
     ingredients: [
       "300g beef sirloin, thinly sliced",
       "3 tbsp soy sauce",
-      "2 tbsp vinegar",
+      "2 tbsp calamansi juice",
       "4 cloves garlic, crushed",
       "1 tsp sugar",
       "1/2 tsp ground pepper",
@@ -545,13 +524,12 @@ const recipes = [
       "Cooking oil"
     ],
     instructions: [
-      "Marinate beef in soy sauce, vinegar, garlic, sugar, and pepper. Refrigerate overnight.",
+      "Marinate beef in soy sauce, calamansi juice, garlic, sugar, and pepper for at least 2 hours.",
       "For garlic rice: stir-fry cold rice with fried garlic until hot and fragrant.",
       "Heat oil in a pan. Fry marinated beef until cooked and slightly caramelized (about 3-4 minutes per side).",
       "Fry eggs sunny-side up or to your preference.",
       "Serve beef tapa with garlic rice and fried egg. Add vinegar dipping sauce on the side."
-    ],
-    nutrition: { calories: 580, protein: "35g", carbs: "55g", fat: "22g" }
+    ]
   },
   {
     id: 18,
@@ -578,8 +556,7 @@ const recipes = [
       "Add cocoa powder and sugar. Stir until well combined and smooth.",
       "Cook for 5 more minutes, stirring constantly to prevent burning.",
       "Serve in bowls. Top with evaporated milk. Best paired with crispy fried tuyo (dried fish)."
-    ],
-    nutrition: { calories: 380, protein: "10g", carbs: "65g", fat: "10g" }
+    ]
   },
 
   // ─── 🍜 NOODLES & SNACKS (2) ───
@@ -593,7 +570,7 @@ const recipes = [
     cookTime: "15 min",
     servings: 4,
     image: "https://images.unsplash.com/photo-1555126634-323283e090fa?w=600&q=80",
-    keyIngredients: ["Pancit canton noodles", "soy sauce", "garlic", "onion", "carrots", "sayote", "sausage"],
+    keyIngredients: ["Pancit canton noodles", "soy sauce", "garlic", "carrots", "sayote", "sausage"],
     ingredients: [
       "500g pancit canton noodles",
       "3 tbsp soy sauce",
@@ -613,8 +590,7 @@ const recipes = [
       "Add carrots and sayote. Stir-fry for 2 minutes.",
       "Add noodles, soy sauce, and chicken broth. Toss continuously until noodles are cooked and sauce is absorbed.",
       "Season with salt and pepper. Serve with calamansi wedges."
-    ],
-    nutrition: { calories: 400, protein: "15g", carbs: "55g", fat: "14g" }
+    ]
   },
   {
     id: 20,
@@ -645,8 +621,7 @@ const recipes = [
       "Repeat until all filling is used.",
       "Heat oil in a deep pan. Fry lumpia in batches until golden brown (about 5-6 minutes).",
       "Drain on paper towels. Serve with sweet chili sauce or banana ketchup."
-    ],
-    nutrition: { calories: 320, protein: "18g", carbs: "22g", fat: "18g" }
+    ]
   }
 ];
 
